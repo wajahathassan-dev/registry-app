@@ -43,9 +43,11 @@ form.addEventListener('submit', function(e){
         resultContainer.innerHTML = "Password & Compare Password are different :("
     }
 
-    resultContainer.className += resultContainer + " d-block"
+    resultContainer.classList.remove('d-none');
+    resultContainer.classList.add('d-block');
 
     setTimeout(() => {
-        resultContainer.className += resultContainer + " d-none"
+        resultContainer.classList.remove('d-block');
+        resultContainer.classList.add('d-none');
     }, 2000)
 })
